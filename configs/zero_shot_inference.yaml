@@ -1,0 +1,32 @@
+# Zero-shot inference configuration
+# Usage: python run_all_tasks.py configs/zero_shot_inference.yaml
+
+mode: inference
+model_type: 1d_conv
+task_type: classification
+
+# Source dataset used to fit the scaler
+inputPath: ./data/nature_milling_2025_normalized.parquet
+train_caseIDs: [2, 3, 4, 6, 7, 8]
+
+output_parent_dir: ./experiments/zero_shot
+
+# Signal and label configuration
+signalColumns: [vib_spindle]
+labelColumn: wear_class
+wearColumnName: wear_norm
+wearTH: 0.6
+signal_length: 9216
+pooling_type: mean
+batch_size: 32
+epochs: 150
+verbose: 2
+
+# Inference tasks — one entry per target dataset
+inference_tasks:
+  - model_path: ./experiments/base_training/<run_dir>/<model_name>  # path without .keras extension
+    inputPath: ./data/nasa_milling_normalized.parquet
+    test_caseIDs: [2, 5, 7]
+  - model_path: ./experiments/base_training/<run_dir>/<model_name>
+    inputPath: ./data/phm2007_milling_normalized.parquet
+    test_caseIDs: [1, 2]

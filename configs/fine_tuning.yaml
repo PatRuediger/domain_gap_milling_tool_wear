@@ -1,0 +1,34 @@
+# Fine-tuning (transfer learning) configuration
+# Usage: python run_all_tasks.py configs/fine_tuning.yaml
+
+mode: transfer_learn
+model_type: 1d_conv
+task_type: classification
+
+# Source dataset (used for scaler fitting context if needed)
+inputPath: ./data/nature_milling_2025_normalized.parquet
+train_caseIDs: [2, 3, 4, 6, 7, 8]
+
+output_parent_dir: ./experiments/fine_tuning
+
+# Signal and label configuration
+signalColumns: [vib_spindle]
+labelColumn: wear_class
+wearColumnName: wear_norm
+wearTH: 0.6
+signal_length: 9216
+pooling_type: mean
+batch_size: 32
+epochs: 150
+verbose: 2
+
+# Transfer learning tasks — one entry per target dataset
+transfer_learning_tasks:
+  - model_path: ./experiments/base_training/<run_dir>/<model_name>  # path without .keras extension
+    inputPath: ./data/nasa_milling_normalized.parquet
+    train_caseIDs: [2, 5]   # small labeled set from target domain
+    test_caseIDs: [7, 10]
+  - model_path: ./experiments/base_training/<run_dir>/<model_name>
+    inputPath: ./data/phm2007_milling_normalized.parquet
+    train_caseIDs: [1]
+    test_caseIDs: [2]

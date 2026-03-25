@@ -1,0 +1,45 @@
+phm_notebooks/wear_df.csv
+data/signal_features.csv
+phm_notebooks/settings_DF.csv
+phm_notebooks/milling_data.parquet
+phm_notebooks/.DS_Store
+data/00_NASA_Milling
+.DS_Store
+/data
+/nature_milling/configs
+/nasa_notebooks/config_n_vs_2
+/experiments
+nasa_notebooks/nasa_milling_normalized.parquet
+phm_notebooks/phm2007_milling_normalized.parquet
+nature_milling/nature_milling_2025_normalized.parquet
+data/mill.db
+nasa_notebooks/__pycache__/modelPipelines.cpython-313.pyc
+__pycache__/modelPipelines.cpython-312.pyc
+nasa_notebooks/__pycache__/modelPipelines.cpython-312.pyc
+phm_notebooks/configs/config_14_6.yaml
+phm_notebooks/configs/config_46_1.yaml
+phm_notebooks/configs/config_16_4.yaml
+
+# Data and experiment outputs
+data/
+experiments/
+experiments_regression/
+experiments_multichannel/
+
+# Temp configs created by run_all_tasks.py
+temp_config_pid*.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.egg-info/
+.venv/
+
+# Claude Code local settings
+.claude/
+
+# Internal planning and HPC docs
+CLEANUP_PLAN.md
+HPC_Elwe_Tutorial.md

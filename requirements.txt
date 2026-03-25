@@ -1,0 +1,10 @@
+tensorflow==2.18.0
+# macOS GPU acceleration: pip install tensorflow-metal==1.2.0
+scikit-learn
+pandas
+numpy
+pyarrow
+matplotlib
+tqdm
+pyyaml
+tensorboard

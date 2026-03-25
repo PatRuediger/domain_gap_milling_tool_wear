@@ -1,0 +1,27 @@
+# Base training configuration
+# Usage: python run_all_tasks.py configs/base_training.yaml
+
+mode: train
+model_type: 1d_conv  # Options: 1d_conv, lstm, autoencoder
+task_type: classification  # Options: classification, regression
+
+inputPath: ./data/nasa_milling_normalized.parquet
+output_parent_dir: ./experiments/base_training
+
+# Signal and label configuration
+signalColumns: [vib_spindle]
+labelColumn: wear_class
+wearColumnName: wear_norm
+wearTH: 0.45  # Threshold for binary wear classification
+
+# Case ID split
+train_caseIDs: [2, 5, 7, 10]
+test_caseIDs: [12, 15]
+
+# Training parameters
+epochs: 150
+batch_size: 32
+validation_split: 0.2
+signal_length: 9000
+pooling_type: mean  # Options: mean, max
+verbose: 2
