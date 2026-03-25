@@ -1,6 +1,6 @@
 # Characterizing Domain Gaps in Milling Tool Wear Prediction
 
-**Authors:** Flore, Simon, Hussong, Krenkel
+**Authors:** Patrick Flore
 **Affiliation:** RPTU Kaiserslautern-Landau, Institut für Verbundwerkstoffe (IVW)
 
 ---
