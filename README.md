@@ -1,7 +1,7 @@
 # Characterizing Domain Gaps in Milling Tool Wear Prediction
 
 **Authors:** Patrick Flore
-**Affiliation:** RPTU Kaiserslautern-Landau, Institut für Verbundwerkstoffe (IVW)
+**Affiliation:** RPTU Kaiserslautern-Landau, Leibniz Institut für Verbundwerkstoffe (IVW)
 
 ---
 
