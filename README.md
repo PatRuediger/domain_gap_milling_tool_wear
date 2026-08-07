@@ -96,12 +96,14 @@ See `configs/base_training.yaml` for a base training example, `configs/zero_shot
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{flore2025domain,
-  title={Characterizing Domain Gaps in Milling Tool Wear Prediction},
-  author={Flore, ... and Simon, ... and Hussong, ... and Krenkel, ...},
-  journal={...},
-  year={2025}
+@article{flore_characterising_2026,
+	title = {Characterising domain gaps in milling tool wear prediction: the primary bottleneck for scalable {Digital} {Twins}},
+	doi = {10.1080/27525783.2026.2708525},
+	journal = {Digital Twin},
+	author = {Flore, Patrick and Simon, Peter M. and Hussong, Marco and Krenkel, Nicole},
+	year = {2026},
 }
+
 ```
 
 > Please update with the final publication details.
